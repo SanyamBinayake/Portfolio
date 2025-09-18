@@ -1,20 +1,25 @@
-import React from 'react';
-import profile_img from '../../assets/aachal2.jpg';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-import './Hero.css';
+import React from "react";
+import profile_img from "../../assets/Sanyam_Binayake.jpg";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import "./Hero.css";
 
 const Hero = () => {
   return (
-    <div id='home' className='hero'>
-      <img src={profile_img} alt="Aachal" />
+    <div id="home" className="hero">
+      <img src={profile_img} alt="Sanyam" />
 
-      <h1><span>I am Aachal Patani,</span> Developer Based in India</h1>
+      <h1>
+        <span>I am Sanyam Binayake,</span> A Full Stack Developer
+      </h1>
 
       <p>
-        I’m a passionate Frontend and Android Developer with a growing expertise in Machine Learning. 
-        I love building visually appealing, responsive web and mobile applications, and I enjoy 
-        exploring intelligent solutions using data and algorithms. Always curious and learning, I aim 
-        to create meaningful tech that makes a difference.
+        I’m a passionate Full-Stack Developer with strong skills in Spring Boot,
+        React, PHP, and MySQL, and I’m constantly exploring new technologies to
+        improve my craft. I love designing and building user-friendly,
+        responsive web applications and enjoy solving challenging backend
+        problems with clean, efficient code. I’m always curious, eager to learn,
+        and motivated to create practical, impactful solutions that make a
+        difference.
       </p>
 
       <div className="hero-action">
