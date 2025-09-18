@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './About.css';
 import theme_pattern from '../../assets/theme_pattern.svg';
-import profile_img from '../../assets/aachal1.jpg';
+import profile_img from '../../assets/Sanyam_Binayake.jpg';
 
 const About = () => {
   const [activeTab, setActiveTab] = useState("about");
@@ -14,79 +14,51 @@ const About = () => {
       </div>
 
       <div className="about-section">
-        {/* ✅ Left Side Profile Image */}
         <div className="abt-left">
           <img src={profile_img} alt="profile" />
         </div>
 
-        {/* ✅ Right Side Tabs and Content */}
         <div className="about-right">
-          {/* Tabs */}
           <div className="about-tabs">
-            <button
-              className={activeTab === "about" ? "active" : ""}
-              onClick={() => setActiveTab("about")}
-            >
-              About Me
-            </button>
-            <button
-              className={activeTab === "skills" ? "active" : ""}
-              onClick={() => setActiveTab("skills")}
-            >
-              Skills
-            </button>
-            <button
-              className={activeTab === "achievements" ? "active" : ""}
-              onClick={() => setActiveTab("achievements")}
-            >
-              Achievements
-            </button>
+            <button className={activeTab === "about" ? "active" : ""} onClick={() => setActiveTab("about")}>About Me</button>
+            <button className={activeTab === "skills" ? "active" : ""} onClick={() => setActiveTab("skills")}>Skills</button>
+            <button className={activeTab === "achievements" ? "active" : ""} onClick={() => setActiveTab("achievements")}>Achievements</button>
           </div>
 
-          {/* Content based on active tab */}
           {activeTab === "about" && (
             <div className="about-para">
-              <p>Hello! I'm Aachal Patani, a passionate and creative developer...</p>
-              <p>I specialize in building responsive web interfaces using HTML, CSS, JavaScript, and React...</p>
-              <p>I am a proud finalist of Smart India Hackathon (SIH) 2024...</p>
-              <p>One of my projects was selected among the Top 20 in Tech Pragyan...</p>
-              <p>I actively participate in hackathons, love building impactful projects...</p>
+              <p>Hello! I'm <strong>Sanyam Binayake</strong>, an aspiring Full-Stack Developer passionate about building scalable, user-friendly applications.</p>
+              <p>I specialize in Spring Boot, React, MySQL, and MongoDB. I design REST APIs and implement real-time systems for communication.</p>
+              <p>I enjoy collaborating in teams, participating in hackathons, and learning new technologies to improve my craft.</p>
             </div>
           )}
 
           {activeTab === "skills" && (
             <div className="about-skills">
               <div className="about-skill">
-                <p>HTML & CSS</p> <hr style={{ width: "85%" }} />
-                <p>JavaScript</p> <hr style={{ width: "75%" }} />
-                <p>React.js</p> <hr style={{ width: "70%" }} />
-                <p>Android App Dev</p> <hr style={{ width: "80%" }} />
-                <p>Machine Learning</p> <hr style={{ width: "65%" }} />
-                <p>Python</p> <hr style={{ width: "70%" }} />
-                <p>Blockchain</p> <hr style={{ width: "60%" }} />
-                <p>AWS</p> <hr style={{ width: "60%" }} />
-                <p>DBMS & SQL</p> <hr style={{ width: "75%" }} />
+                <p>Java</p> <hr style={{ width: "85%" }} />
+                <p>Spring Boot</p> <hr style={{ width: "80%" }} />
+                <p>React.js</p> <hr style={{ width: "75%" }} />
+                <p>MySQL</p> <hr style={{ width: "80%" }} />
+                <p>MongoDB</p> <hr style={{ width: "65%" }} />
+                <p>REST APIs</p> <hr style={{ width: "75%" }} />
+                <p>WebSocket / WebRTC</p> <hr style={{ width: "65%" }} />
+                <p>HTML, CSS, JS</p> <hr style={{ width: "85%" }} />
                 <p>Git & GitHub</p> <hr style={{ width: "80%" }} />
               </div>
             </div>
           )}
 
           {activeTab === "achievements" && (
-            <div className="about-achivements">
-              <div className="about-achivement">
-                <h1>Event Leader – Teachers’ Day</h1>
-                <p>Led the full event, managed flow & performances.</p>
-                <h1>Guest Speaker – MET</h1>
-                <p>Shared hackathon experience to inspire students.</p>
-                <h1>IPR Contributor – KKWIEER</h1>
-                <p>Filed and processed IPRs, learned patent procedures.</p>
-                <h1>Announcer – Equinox</h1>
-                <p>Anchored the event with clarity and energy.</p>
-                <h1>Hackathon Committee Member</h1>
-                <p>Managed logistics and onboarding at Innov-Era.</p>
-                <h1>AWS Cloud Certified</h1>
-                <p>Certified in deploying scalable cloud solutions.</p>
-              </div>
+            <div className="about-achievements">
+              <h1>Finalist – CODE-A-THON 2024</h1>
+              <p>Among the top performers in a state-level hackathon organized by Savali Foundation & Eshwar Foundation.</p>
+              <h1>College Website Developer</h1>
+              <p>Designed & deployed two official college websites to enhance accessibility for students and faculty.</p>
+              <h1>Intern – Sumago Infotech</h1>
+              <p>Contributed to responsive web development tasks (HTML, CSS, JS).</p>
+              <h1>Strong Academics</h1>
+              <p>BTech CSE (CGPA: 9.38/10) at WIT Solapur.</p>
             </div>
           )}
         </div>

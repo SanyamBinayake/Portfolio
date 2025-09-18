@@ -1,4 +1,18 @@
-/* Reset default list styles */
+/* Navbar styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 60px; /* reduced margins for better header alignment */
+  position: relative;
+  z-index: 5;
+}
+
+.nav-logo{
+  width: 120px;
+}
+
+/* Desktop menu */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -6,22 +20,8 @@
   margin: 0;
   padding: 0;
   gap: 60px;
-  font-size: 20px;
-  position: relative;
-  transition: right 0.5s ease;
-}
-
-/* Navbar container */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 20px 170px;
-}
-
-.navbar img{
-  width: 160px;
-  margin-bottom: 20px;
+  font-size: 18px;
+  transition: right 0.4s ease;
 }
 
 /* Menu items */
@@ -29,20 +29,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
+}
+
+.nav-menu li a, .nav-menu li p {
+  text-decoration: none;
+  color: white;
+  margin: 0;
   cursor: pointer;
 }
 
-.nav-menu li a {
-  text-decoration: none;
-  color: white;
-  transition: color 0.3s ease;
-}
-
-.nav-menu li a:hover {
-  color: #cccccc;
-}
-
+/* underline image */
 .nav-menu img {
   margin: auto;
   height: 8px;
@@ -50,34 +47,23 @@
 
 /* Connect Button */
 .nav-connect {
-  margin-left: 20px;
-  padding: 20px 40px;
+  padding: 14px 28px;
   border-radius: 50px;
   background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
-  font-size: 20px;
+  font-size: 16px;
   cursor: pointer;
-  transition: 0.5s;
-  font-weight: bold;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
 }
 
 .nav-connect a {
-  text-decoration: none;
-  color: white;
-  width: 100%;
-  height: 100%;
-  text-align: center;
+  color: white; /* Set the text color to white */
+  text-decoration: none; /* Remove the underline */
 }
 
-.nav-connect:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Mobile specific styles */
+/* Mobile button (open/close) */
 .nav-mob-open,
 .nav-mob-close {
   display: none;
@@ -86,20 +72,26 @@
 /* Mobile styles */
 @media (max-width: 768px) {
   .navbar {
-    margin: 20px 30px;
+    margin: 16px 20px;
+  }
+
+  .nav-logo{
+    width: 100px;
   }
 
   .nav-connect {
     display: none;
   }
 
+  /* show small burger icons */
   .nav-mob-open {
     display: block;
     position: fixed;
-    right: 30px;
-    top: 25px;
-    z-index: 3;
-    width: 30px;
+    right: 24px;
+    top: 20px;
+    z-index: 50;
+    width: 22px; /* smaller size */
+    height: auto;
     cursor: pointer;
   }
 
@@ -108,29 +100,30 @@
     flex-direction: column;
     align-items: start;
     top: 0;
-    right: -350px;
-    background-color: #1F0016;
+    right: -320px; /* hidden by default */
+    background-color: #131212;
     width: 300px;
     height: 100%;
-    z-index: 2;
-    padding: 60px 30px;
-    gap: 30px;
-    transition: right 0.5s ease;
+    z-index: 45;
+    padding: 60px 24px;
+    gap: 26px;
+    transition: right 0.35s ease;
+    box-shadow: -8px 0 20px rgba(0,0,0,0.6);
   }
 
   .nav-menu li {
-    font-size: 22px;
+    font-size: 20px;
     flex-direction: row;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
   }
 
   .nav-mob-close {
     display: block;
     position: absolute;
-    top: 30px;
-    right: 30px;
-    width: 30px;
+    top: 20px;
+    right: 18px;
+    width: 22px; /* smaller */
     cursor: pointer;
   }
 }

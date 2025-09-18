@@ -5,7 +5,6 @@ import project4_img from '../assets/ach4.jpg';
 import project5_img from '../assets/ach5.jpg';
 import project6_img from '../assets/ach6.jpg';
 import project7_img from '../assets/ach7.jpg';
-import project8_img from '../assets/ach8.jpg';
 
 const myachivements = [
   {
@@ -42,11 +41,6 @@ const myachivements = [
     w_no: 7,
     w_name: "Web Design",
     w_img: project7_img,
-  },
-  {
-    w_no: 8,
-    w_name: "Web Design",
-    w_img: project8_img,
   },
 ];
 
